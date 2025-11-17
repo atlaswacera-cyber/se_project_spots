@@ -2,9 +2,7 @@
 
 ### Overview
 
-- Intro  
-  This is the intro.
-
+- Intro
 - Figma
 - Images
 
