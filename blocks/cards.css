@@ -1,6 +1,6 @@
 .cards {
   padding: 20px 0 40px;
-  bottom-border: 1px solid #21212166;
+  border-bottom: 1px solid #21212166;
 }
 .cards__list {
   list-style-type: none;
