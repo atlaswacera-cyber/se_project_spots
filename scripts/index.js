@@ -146,9 +146,8 @@ addCardFormElement.addEventListener("submit", (evt) => {
   const cardElement = getCardElement(cardData);
   cardsList.prepend(cardElement);
 
+  addCardFormElement.reset();
   closeModal(newPostModal);
-  nameInput.value = "";
-  linkInput.value = "";
 });
 
 initialCards.forEach((item) => {

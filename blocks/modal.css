@@ -11,7 +11,9 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  transition: opacity 0.3s ease;
+  transition:
+    visibility 0.3s,
+    opacity 0.3s ease-in;
 }
 
 .modal_is-opened {
@@ -122,8 +124,8 @@
 
 .modal__close-btn {
   position: absolute;
-  top: 5px;
-  right: -15px;
+  top: 0;
+  right: 0;
   transform: translate(50%, -50%);
   width: 32px;
   height: 32px;
@@ -144,15 +146,13 @@
   background-image: url(../images/closeiconnonhover.svg);
 }
 
-.modal__close_type_preview {
+.modal__close-btn_type_preview {
   top: 10px;
-  right: -20px;
 }
 
 @media screen and (max-width: 480px) {
-  .modal__close_type_preview {
-    right: -35px;
-    top: 0;
+  .modal__close-btn_type_preview {
+    top: -5px;
   }
 
   .modal__title {
@@ -165,5 +165,15 @@
 
   .modal__close-btn {
     transform: translate(30%, -30%);
+  }
+
+  .modal__image {
+    max-width: none;
+    max-height: none;
+    width: 100%;
+  }
+
+  .modal__caption {
+    font-size: 16px;
   }
 }

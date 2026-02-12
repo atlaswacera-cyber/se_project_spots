@@ -98,11 +98,21 @@
           <form class="modal__form">
             <label class="modal__label">
               Title
-              <input type="text" class="modal__input" placeholder="Title" />
+              <input
+                type="text"
+                class="modal__input"
+                placeholder="Title"
+                required
+              />
             </label>
             <label class="modal__label">
               Image URL
-              <input type="url" class="modal__input" placeholder="Image link" />
+              <input
+                type="url"
+                class="modal__input"
+                placeholder="Image link"
+                required
+              />
             </label>
             <button type="submit" class="modal__submit-btn">Create</button>
           </form>
@@ -110,16 +120,15 @@
       </div>
     </div>
 
- <div class="modal modal_is-opened" id="preview-modal">
-        <div class="modal__image-container">
-          <button
-            type="button"
-            class="modal__close-btn modal__close_type_preview"
-            aria-label="Close modal"
-          ></button>
-          <img src="#" alt="" class="modal__image">
-          <p class="modal__caption"></p>
-        </div>
+    <div class="modal" id="preview-modal">
+      <div class="modal__image-container">
+        <button
+          type="button"
+          class="modal__close-btn modal__close-btn_type_preview"
+          aria-label="Close modal"
+        ></button>
+        <img src="#" alt="" class="modal__image" />
+        <p class="modal__caption"></p>
       </div>
     </div>
 
