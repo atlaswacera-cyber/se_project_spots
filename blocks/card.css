@@ -60,15 +60,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-
-  opacity: 0;
+  z-index: 1
   transition:
     opacity 0.15s ease,
     transform 0.15s ease;
-}
-
-.card:hover .card__delete-button {
-  opacity: 1;
 }
 
 .card__delete-button:hover {
