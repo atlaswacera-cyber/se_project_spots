@@ -60,7 +60,6 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  z-index: 1
   transition:
     opacity 0.15s ease,
     transform 0.15s ease;
