@@ -51,12 +51,10 @@
   position: absolute;
   top: 10px;
   right: 10px;
-
   background-image: url(../images/defaultdeletebin.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-
   background-color: transparent;
   border: none;
   cursor: pointer;

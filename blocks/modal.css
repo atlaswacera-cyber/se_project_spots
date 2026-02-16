@@ -125,8 +125,8 @@
 
 .modal__close-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 30px;
+  right: 50px;
   width: 32px;
   height: 32px;
   background-image: url(../images/closeicon.svg);
@@ -153,11 +153,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .modal__close-btn_type_preview {
-    top: -40px;
-    right: 0;
-  }
-
   .modal__title {
     font-size: 20px;
   }
@@ -167,7 +162,13 @@
   }
 
   .modal__close-btn {
-    transform: translate(30%, -30%);
+    top: 30px;
+    right: 50px;
+  }
+
+  .modal__close-btn_type_preview {
+    top: -40px;
+    right: 0;
   }
 
   .modal__image {
