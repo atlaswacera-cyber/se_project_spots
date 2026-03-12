@@ -61,6 +61,14 @@ function openModal(modal) {
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+
+  if (modal === editProfileModal) {
+    window.resetValidation(editProfileForm, window.validationSettings);
+  }
+
+  if (modal === newPostModal) {
+    window.resetValidation(addCardFormElement, window.validationSettings);
+  }
 }
 
 function getCardElement(data) {
@@ -89,7 +97,6 @@ function getCardElement(data) {
     previewImageEl.src = data.link;
     previewImageEl.alt = data.name;
     previewCaptionEl.textContent = data.name;
-
     openModal(previewModal);
   });
 

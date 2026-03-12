@@ -51,6 +51,7 @@
   font-size: 16px;
   line-height: 1.1;
   margin: 0 0 32px;
+  display: block;
 }
 
 .modal__input {
@@ -90,6 +91,12 @@
 
 .modal__submit-btn:hover {
   opacity: 0.8;
+}
+
+.modal__error {
+  display: block;
+  color: red;
+  margin-top: 8px;
 }
 
 .modal__submit-btn:focus {
