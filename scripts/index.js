@@ -55,19 +55,20 @@ const previewCaptionEl = previewModal.querySelector(".modal__caption");
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
+const [nameInput, linkInput] =
+  addCardFormElement.querySelectorAll(".modal__input");
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+}
 
-  if (modal === editProfileModal) {
-    window.resetValidation(editProfileForm, window.validationSettings);
-  }
-
-  if (modal === newPostModal) {
-    window.resetValidation(addCardFormElement, window.validationSettings);
+function closeOnOverlay(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closeModal(evt.target);
   }
 }
 
@@ -106,6 +107,7 @@ function getCardElement(data) {
 editProfileBtn.addEventListener("click", () => {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  window.resetValidation(editProfileForm, window.validationSettings);
   openModal(editProfileModal);
 });
 
@@ -117,10 +119,8 @@ editCloseBtn.addEventListener("click", () => closeModal(editProfileModal));
 newPostCloseBtn.addEventListener("click", () => closeModal(newPostModal));
 previewCloseBtn.addEventListener("click", () => closeModal(previewModal));
 
-previewModal.addEventListener("click", (evt) => {
-  if (evt.target === previewModal) {
-    closeModal(previewModal);
-  }
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("click", closeOnOverlay);
 });
 
 document.addEventListener("keydown", (evt) => {
@@ -139,9 +139,6 @@ editProfileForm.addEventListener("submit", (evt) => {
   closeModal(editProfileModal);
 });
 
-const [nameInput, linkInput] =
-  addCardFormElement.querySelectorAll(".modal__input");
-
 addCardFormElement.addEventListener("submit", (evt) => {
   evt.preventDefault();
 
@@ -154,6 +151,7 @@ addCardFormElement.addEventListener("submit", (evt) => {
   cardsList.prepend(cardElement);
 
   addCardFormElement.reset();
+  window.resetValidation(addCardFormElement, window.validationSettings);
   closeModal(newPostModal);
 });
 
