@@ -100,7 +100,4 @@ function enableValidation(config) {
   formList.forEach((formElement) => setEventListeners(formElement, config));
 }
 
-enableValidation(settings);
-
-window.resetValidation = resetValidation;
-window.validationSettings = settings;
+export { settings, enableValidation, resetValidation };
