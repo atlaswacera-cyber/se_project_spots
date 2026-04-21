@@ -37,3 +37,9 @@ This project updates an existing webpage to be fully responsive and accessible a
 [Video Link 5](https://www.loom.com/share/355428c9e3b74c51b4764acf209f130d)
 
 [Video Link 6](https://www.loom.com/share/c43d6777b0fb4bad9149744be372a521)
+
+[Video Link 7](https://www.loom.com/share/442d08301c8a45739bce828c4097015f)
+
+[Video Link 8](https://www.loom.com/share/4daa6612f1274de0b7191d72463fc757)
+
+[Video Link 9](https://www.loom.com/share/54a35c567b2f477598069da38635465e)
