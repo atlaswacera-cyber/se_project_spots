@@ -32,6 +32,10 @@
   box-sizing: border-box;
 }
 
+.modal__container_type_delete {
+  max-width: 630px;
+}
+
 .modal__title {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -40,9 +44,17 @@
   margin: 0 0 32px;
 }
 
+.modal__title_type_delete {
+  max-width: 330px;
+}
+
 .modal__form {
   display: flex;
   flex-direction: column;
+}
+
+.modal__form_type_delete {
+  margin: 0;
 }
 
 .modal__label {
@@ -91,6 +103,10 @@
   transition:
     opacity 0.15s ease,
     transform 0.15s ease;
+}
+
+.modal__submit-btn_type_delete {
+  width: 156px;
 }
 
 .modal__submit-btn:hover {

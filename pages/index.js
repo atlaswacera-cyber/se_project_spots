@@ -211,7 +211,6 @@ addCardFormElement.addEventListener("submit", (evt) => {
       cardsList.prepend(cardElement);
 
       addCardFormElement.reset();
-      resetValidation(addCardFormElement, settings);
       closeModal(newPostModal);
     })
     .catch((err) => {
@@ -253,6 +252,7 @@ editAvatarForm.addEventListener("submit", (evt) => {
     .then((userData) => {
       profileAvatarEl.src = userData.avatar;
       profileAvatarEl.alt = userData.name;
+      editAvatarForm.reset();
       closeModal(editAvatarModal);
     })
     .catch((err) => {
@@ -263,7 +263,8 @@ editAvatarForm.addEventListener("submit", (evt) => {
     });
 });
 
-Promise.all([api.getUserInfo(), api.getInitialCards()])
+api
+  .getAppData()
   .then(([userData, cards]) => {
     profileNameEl.textContent = userData.name;
     profileDescriptionEl.textContent = userData.about;
