@@ -39,6 +39,9 @@ const editProfileSubmitBtn =
   editProfileForm.querySelector(".modal__submit-btn");
 const addCardSubmitBtn = addCardFormElement.querySelector(".modal__submit-btn");
 const deleteCardSubmitBtn = deleteCardForm.querySelector(".modal__submit-btn");
+const deleteCardCancelBtn = deleteCardModal.querySelector(
+  ".modal__button_type_cancel",
+);
 const editAvatarSubmitBtn = editAvatarForm.querySelector(".modal__submit-btn");
 
 const editProfileNameInput = editProfileModal.querySelector(
@@ -155,13 +158,10 @@ editProfileBtn.addEventListener("click", () => {
 });
 
 newPostBtn.addEventListener("click", () => {
-  resetValidation(addCardFormElement, settings);
   openModal(newPostModal);
 });
 
 editAvatarBtn.addEventListener("click", () => {
-  editAvatarForm.reset();
-  resetValidation(editAvatarForm, settings);
   openModal(editAvatarModal);
 });
 
@@ -169,6 +169,7 @@ editCloseBtn.addEventListener("click", () => closeModal(editProfileModal));
 newPostCloseBtn.addEventListener("click", () => closeModal(newPostModal));
 previewCloseBtn.addEventListener("click", () => closeModal(previewModal));
 deleteCloseBtn.addEventListener("click", () => closeModal(deleteCardModal));
+deleteCardCancelBtn.addEventListener("click", () => closeModal(deleteCardModal));
 avatarCloseBtn.addEventListener("click", () => closeModal(editAvatarModal));
 
 document.querySelectorAll(".modal").forEach((modal) => {
