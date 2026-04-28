@@ -33,7 +33,8 @@
 }
 
 .modal__container_type_delete {
-  max-width: 630px;
+  max-width: 430px;
+  padding: 32px 20px;
 }
 
 .modal__title {
@@ -45,7 +46,11 @@
 }
 
 .modal__title_type_delete {
-  max-width: 330px;
+  max-width: 293px;
+  margin: 0 auto 32px;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
 }
 
 .modal__form {
@@ -63,6 +68,7 @@
 
 .modal__actions_type_delete {
   gap: 20px;
+  justify-content: center;
 }
 
 .modal__label {
@@ -115,10 +121,11 @@
 
 .modal__submit-btn_type_delete {
   width: 156px;
+  background-color: #ff6565;
 }
 
 .modal__submit-btn_type_delete:hover {
-  background-color: #ff6565;
+  background-color: #ff3333;
   opacity: 1;
 }
 

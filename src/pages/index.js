@@ -212,6 +212,7 @@ addCardFormElement.addEventListener("submit", (evt) => {
       cardsList.prepend(cardElement);
 
       addCardFormElement.reset();
+      resetValidation(addCardFormElement, settings);
       closeModal(newPostModal);
     })
     .catch((err) => {
@@ -254,6 +255,7 @@ editAvatarForm.addEventListener("submit", (evt) => {
       profileAvatarEl.src = userData.avatar;
       profileAvatarEl.alt = userData.name;
       editAvatarForm.reset();
+      resetValidation(editAvatarForm, settings);
       closeModal(editAvatarModal);
     })
     .catch((err) => {
